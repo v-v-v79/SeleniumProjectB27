@@ -20,10 +20,10 @@ public class IframeEG {
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
         driver.manage().window().maximize();
-        driver.get("https://practice.cydeo.com/iframe");
     }
     @Test
     public void iframeTask() {
+        driver.get("https://practice.cydeo.com/iframe");
         driver.switchTo().frame(driver.findElement(By.xpath("//iframe[@id='mce_0_ifr']")));
         WebElement textArea = driver.findElement(By.xpath("//p"));
         System.out.println(textArea.getText());
