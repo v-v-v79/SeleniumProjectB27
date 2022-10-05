@@ -1,36 +1,22 @@
 package com.cydeo.tests.practice;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
+import com.cydeo.tests.TestBase;
 import org.openqa.selenium.*;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.annotations.*;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
 
-public class Start_1 {
-    WebDriver driver;
-
-    @BeforeClass
-    public void setDriver() {
-        WebDriverManager.chromedriver().setup();
-        driver = new ChromeDriver();
-        driver.manage().window().maximize();
-    }
-
-    @AfterClass
-    public void tearDown() {
-        driver.quit();
-    }
+public class Start_1 extends TestBase {
 
     @BeforeMethod
     public void getWebPage() throws InterruptedException {
         driver.get("https://startappliancerepair.com/");
         Thread.sleep(4000);
     }
-
     @AfterMethod
     public void closeDriver() {
         driver.close();
     }
-
     @Test
     public void homePageFunctionality() {
         try {
@@ -46,7 +32,7 @@ public class Start_1 {
             WebElement password = driver.findElement(By.xpath(
                     "//input[@class='input password']"));
             js.executeScript("arguments[0].click();", password);
-            password.sendKeys("!3Oo9u0N#pvneOoy$S)U%cXZ" + Keys.ENTER);
+            password.sendKeys("xxxxx" + Keys.ENTER);
             WebElement services = driver.findElement(By.xpath("//div[@class=" +
                     "'elementor-container elementor-column-gap-no']//i[@class='fa fa-angle-down']"));
             WebElement dishwasher = driver.findElement(By.xpath("//div[@class=" +
