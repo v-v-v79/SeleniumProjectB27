@@ -19,7 +19,7 @@ public class GetTextGetAttribute {
         driver.manage().window().maximize();
     }
     @Test(priority = 1)
-    public void getTextGetAttribute() {
+public void getTextGetAttribute() {
         driver.get("https://practice.cydeo.com/registration_form");
         String actualText = driver.findElement(By.xpath("//h2")).getText();
         String expected = "Registration form";
