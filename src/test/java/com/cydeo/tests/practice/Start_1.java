@@ -1,6 +1,6 @@
 package com.cydeo.tests.practice;
 
-import com.cydeo.tests.TestBase;
+import com.cydeo.tests.utilities.TestBase;
 import org.openqa.selenium.*;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;

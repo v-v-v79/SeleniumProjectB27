@@ -1,6 +1,7 @@
 package com.cydeo.tests.day07;
 
-import com.cydeo.tests.TestBase;
+import com.cydeo.tests.utilities.BrowserUtils;
+import com.cydeo.tests.utilities.TestBase;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
@@ -11,7 +12,7 @@ import java.util.Set;
 public class AnotherWindowsEG extends TestBase {
 
     @Test
-    public void aFewWindows() throws InterruptedException{
+    public void aFewWindows() {
         driver.get("https://practice.cydeo.com/windows");
 
         //Assert title is Windows
@@ -25,11 +26,12 @@ public class AnotherWindowsEG extends TestBase {
         clickHere.click();
         act = driver.getTitle();
         System.out.println(act);
-        Thread.sleep(4000);
+        BrowserUtils.sleep(4);
+
 
         WebElement clickCydeo = driver.findElement(By.xpath("//a[.='CYDEO']"));
         clickCydeo.click();
-        Thread.sleep(4000);
+        BrowserUtils.sleep(4);
 
         //Switch new Window
         Set<String> allWindows = driver.getWindowHandles();
@@ -42,7 +44,7 @@ public class AnotherWindowsEG extends TestBase {
 
         WebElement applyNow = driver.findElement(By.xpath("//span[.='Apply Now']"));
         applyNow.click();
-        Thread.sleep(4000);
+        BrowserUtils.sleep(4);
 
         System.out.println(driver.getTitle());
         //Assert Title is new Window

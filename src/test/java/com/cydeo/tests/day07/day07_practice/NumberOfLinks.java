@@ -1,6 +1,6 @@
 package com.cydeo.tests.day07.day07_practice;
 
-import com.cydeo.tests.TestBase;
+import com.cydeo.tests.utilities.TestBase;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
